@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2B-DM-eeG" customClass="LXCaptchaView">
+                                <rect key="frame" x="60.5" y="169" width="200" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DDM-8v-A65"/>
+                                    <constraint firstAttribute="width" constant="200" id="KMg-qH-P96"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="digit">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="cursorColor">
+                                        <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGu-jr-d5T">
+                                <rect key="frame" x="129" y="369" width="62" height="30"/>
+                                <state key="normal" title="激活输入"/>
+                                <connections>
+                                    <action selector="beginInputting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rhh-nv-wAm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0q-dH-fPt">
+                                <rect key="frame" x="129" y="407" width="62" height="30"/>
+                                <state key="normal" title="清空输入"/>
+                                <connections>
+                                    <action selector="clearContent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZlR-F1-K5R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j2B-DM-eeG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="AhN-Qz-14S"/>
+                            <constraint firstItem="j2B-DM-eeG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nqy-bm-Ry7"/>
+                            <constraint firstItem="b0q-dH-fPt" firstAttribute="top" secondItem="IGu-jr-d5T" secondAttribute="bottom" constant="8" id="Zip-wp-drr"/>
+                            <constraint firstItem="IGu-jr-d5T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="bDj-RC-3UX"/>
+                            <constraint firstItem="IGu-jr-d5T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kyQ-d9-8JI"/>
+                            <constraint firstItem="b0q-dH-fPt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wvK-rp-zQ7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="captchaView" destination="j2B-DM-eeG" id="Ccc-Hu-MLY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.25" y="123.59154929577466"/>
+        </scene>
+    </scenes>
+</document>
