@@ -293,8 +293,7 @@
 	}
 
 	for (UITextField *textField in self.textFields) {
-		if ([textField canBecomeFirstResponder]) {
-			[textField becomeFirstResponder];
+		if ([textField becomeFirstResponder]) {
 			self.isInputting = YES;
 			return;
 		}
